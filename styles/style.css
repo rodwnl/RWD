@@ -3,3 +3,24 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
+
+body{
+  /* 600 px 이하 */
+  background-color: var(--yellow);
+}
+
+@media (min-width:320px) and (max-width: 768px){
+  /* 모바일. 320~768px 부터 초록색 */
+  body{
+    background-color: var(--green);
+  }
+}
+
+@media (min-width:769px){
+    /* 769px 부터 파란색 */
+  body{
+    background-color: var(--blue);
+  }
+}
+
