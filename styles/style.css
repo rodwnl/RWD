@@ -5,22 +5,14 @@
 @import url(./base.css);
 
 
-body{
-  /* 600 px 이하 */
-  background-color: var(--yellow);
+/* 모든 디바이스 (All Device) */
+/* 공통 헤더 */
+.appHeader {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: var(--spacing-base) var(--spacing-lg);
+  gap: var(--spacing-base);
 }
 
-@media (min-width:320px) and (max-width: 768px){
-  /* 모바일. 320~768px 부터 초록색 */
-  body{
-    background-color: var(--green);
-  }
-}
-
-@media (min-width:769px){
-    /* 769px 부터 파란색 */
-  body{
-    background-color: var(--blue);
-  }
-}
 
