@@ -12,7 +12,7 @@
           document.body.classList.toggle('gridShow');
         }
       });
-    
+
       // 모바일 메뉴열기 버튼 누를 때 is--active 토글 및 aria-label 변경
       var btn = document.querySelector('.button--burger');
       var menu = document.querySelector('.menu');
@@ -21,7 +21,7 @@
       var firstItem = menu.querySelector('.menu__list li:first-child a');
       var lastItem = menu.querySelector('.menu__list li:last-child a');
       var video = document.querySelector('.news__video');
-    
+
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         btn.classList.toggle('is--active');
@@ -36,22 +36,22 @@
         }
         menu.classList.toggle('is--active');
       });
-    
+
       /* -------------------------------------------------------------------------- */
-    
+
       // 키보드 트랩 이벤트 핸들링
       function keyboardTrapInMenu() {
         lastItem.addEventListener('keydown', handleLastLinkTrap);
         btn.addEventListener('keydown', handleBtnTrap);
         window.addEventListener('keyup', handleTrapOff);
       }
-    
+
       function keyboardUntrapInMenu() {
         lastItem.removeEventListener('keydown', handleLastLinkTrap);
         btn.removeEventListener('keydown', handleBtnTrap);
         window.removeEventListener('keyup', handleTrapOff);
       }
-    
+
       function handleLastLinkTrap(e) {
         var tabKey = e.keyCode === 9;
         var shiftKey = e.shiftKey;
@@ -65,7 +65,7 @@
           }
         }
       }
-    
+
       function handleBtnTrap(e) {
         var tabKey = e.keyCode === 9;
         var shiftKey = e.shiftKey;
@@ -78,7 +78,7 @@
           }
         }
       }
-    
+
       function handleTrapOff(e) {
         if (e.keyCode === 27) {
           btn.click();
@@ -86,7 +86,7 @@
           keyboardUntrapInMenu();
         }
       }
-    
+
       // 메뉴 리스트의 트랜지션 이벤트 핸들링
       menuList.addEventListener('transitionstart', function (e) {
         // 메뉴 열기 버튼이 활성 클래스를 가졌을 때
@@ -100,7 +100,7 @@
           menuList.style.cssText = 'transition: none';
         }
       });
-    
+
       // 메뉴, 메뉴 열기 버튼이 활성화 된 상태에서 창 크기 조정 시, 활성 클래스 제거
       window.addEventListener('resize', function (e) {
         if (btn.classList.contains('is--active')) {
@@ -109,7 +109,7 @@
         }
       });
     })();
-    
+
   });
 
   // 모바일 메뉴열기 버튼 누를 때 is--active 토글 및 aria-label 변경
@@ -209,6 +209,6 @@
       }
     }, "1000")
 
-    
+
   });
 })();
